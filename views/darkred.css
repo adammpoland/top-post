@@ -1,0 +1,249 @@
+body { 
+    /* background-image: url("img/blackDots.gif"); */
+    background-size: cover;
+    background-color: #696969;
+    
+    /*background-image: url("img/red.jpg");*/
+    color:red;
+    font-family: 'Megrim', cursive;
+
+    font-size: large;
+  }
+
+  .container{
+   /* max-width: 800px;*/
+    margin: auto;
+    opacity: 0.8;
+    background-color: #000000;
+    border-radius: 25px;
+    border: 1px solid red;
+    padding: 15px;
+    overflow:visible;
+    word-wrap: break-word;
+
+    z-index: 0;
+  }
+  .note-editor {
+    z-index: 2;
+    background-color: #696969;
+  }
+  .top{
+    margin: auto;
+    background-color: black;
+    opacity: 0.8;
+    border: 1px solid red;
+    padding: 1px 15px;
+    overflow:hidden;
+  }
+  .containerInner{
+   
+  
+    font-family: Railway;
+    border: 1px solid red;
+
+
+  }
+
+  .items{
+    padding:1em;
+    border:1px black;
+  }
+
+  input.items{
+    width:200px;
+    height: 2em;
+    background-color: red;
+    border: 1px solid gray; 
+    padding: 5px;
+    text-align: center;
+    font-size: large;
+    margin:auto;
+    
+  }
+
+  input.items:hover{
+    background-color: darkorange;
+
+  }
+  input.delete:hover{
+    background-color: darkorange;
+  }
+
+  input.delete{
+    width: 200px;
+    height: 2em;
+    background-color: red;
+    border: 1px solid gray; 
+    padding:5px;
+    margin:auto;
+    text-align:center;
+    font-size: large;
+
+  }
+
+ .btn{
+ 
+  background-color: orange;
+  border: 1px solid gray; 
+  cursor: pointer;
+  color: black;
+  font-family: Megrim;
+ }
+
+ .sidebtn{
+  background-color: orange;
+  border: 1px solid gray; 
+  cursor: pointer;
+  color: black;
+  font-family: Megrim;
+  width: 8em;
+  word-wrap: break-word;
+  border-radius: 5%;
+
+ }
+
+ .btn.hover{
+   background-color: darkslategray;
+ }
+
+ textarea{
+   color: red;
+   background-color: black;
+   z-index: 0;
+ }
+  input.upload{
+    width:200px;
+    height: 2em;
+    background-color: red;
+    border: 1px solid gray; 
+    padding: 5px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .fileControl{
+    float: left;
+  }
+
+  
+  .title{
+    font-size:80px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    border: 1px solid red; 
+
+    top: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+    border: 1px solid red; 
+    
+
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: darkred;
+    color: grey;
+  }
+  
+  .custom-file-upload {
+    width: 400px;
+    height: 3em;
+    background-color: red;
+    border: 1px solid gray; 
+    font-size: larger;
+    cursor: pointer;
+    color: black;
+}
+input.submit{
+  background-color:darkred;
+  border:1px;
+  border-color:darkred;
+  max-width:200px;
+  height:20px;
+  color:red;
+}
+
+.FrameContainer{
+  width:auto;
+  background-color: darkgrey;
+  opacity: 0.9;
+  border: 1px solid red;
+  padding: 20px;
+  overflow:hidden;
+}
+.frames{
+  padding: 10px;
+
+  float: left;
+  border: 1px solid red;
+  margin:auto;
+  width: 50%;
+
+}
+.truncate {
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a{
+  color:red;
+  text-decoration: none;
+  text-align: center;
+
+}
+a:link{
+  color:red;
+}
+a:hover{
+  color:orange;
+}
+iframe{
+  min-height:300px;
+  max-height:500px;
+  max-width:600px;
+  border:none;
+}
+
+
+.labelfix{
+  color: red;
+  font-size:15px;
+  background: none;
+}
+
+.cHeight{
+  min-height: 100px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btnSmall{
+  background-color: orange;
+  border: 1px solid gray; 
+  margin:auto;
+  cursor: pointer;
+  color: black;
+  font-family: Megrim;
+  float: left;
+}

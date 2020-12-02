@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <title>Top Post</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="darkred.css">
+
+  </head>
+
+  <body>
+
+      <br>
+      <div class="container">
+        <h1 class="title">Top Post</h1>
+    </div>
+    <br>
+  <div class="container">
+    <div class="row">
+      <form class="col s12" action="/" method="post">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Whatever name you want" id="name" name="name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="summernote" name="message" ></textarea>
+        
+          
+            </textarea>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="input-field col s12">
+            <textarea name="message"></textarea>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="submit" value="submit" class="btn">
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <br>
+  
+  <% for(let i=notes.length-1; i>=0; i--) {%>
+    
+    <div class="row">
+      <div class="container">
+        <div class="col s10">
+          <p><%-notes[i].message%></p>
+          <p><%=notes[i].name%></p>
+          <p><%=notes[i].date%></p>
+        </div>
+        <div class="col s2">
+          <div class="right">
+            <p>Ranking: <%=notes[i].ranking%></p>
+            <form action="upvote" method="POST">
+              <input type="hidden" name="id" value="<%= notes[i]._id%>">
+              <input type="submit" class="sidebtn" value="Up Vote" >
+            </form>
+            <br>
+    
+            <form action="downvote" method="POST">
+              <input type="hidden" name="id" value="<%= notes[i]._id%>">
+              <input type="submit" class="sidebtn" value="Down Vote">
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+        <br>
+  <% } %>
+
+
+    <!-- Initialize Quill editor -->
+<script>
+  $(document).ready(function() {
+  $('#summernote').summernote();
+});
+</script>
+  </body>
+</html>
